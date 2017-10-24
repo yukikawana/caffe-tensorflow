@@ -150,6 +150,11 @@ class TensorFlowMapper(NodeMapper):
         kwargs = {} if scale_offset else {'scale_offset': False}
         return MaybeActivated(node, default=False)('batch_normalization', **kwargs)
 
+    def map_bn(self, node):
+        scale_offset = len(node.data) == 4
+        kwargs = {} if scale_offset else {'scale_offset': False}
+        return MaybeActivated(node, default=False)('batch_normalization', **kwargs)
+
     def map_eltwise(self, node):
         operations = {0: 'multiply', 1: 'add', 2: 'max'}
         op_code = node.parameters.operation

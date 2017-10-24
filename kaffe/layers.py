@@ -11,6 +11,7 @@ LAYER_DESCRIPTORS = {
     'Accuracy': shape_scalar,
     'ArgMax': shape_not_implemented,
     'BatchNorm': shape_identity,
+    'BN': shape_identity,
     'BNLL': shape_not_implemented,
     'Concat': shape_concat,
     'ContrastiveLoss': shape_scalar,

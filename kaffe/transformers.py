@@ -278,7 +278,7 @@ class ParameterNamer(object):
                 names = ('weights',)
                 if node.parameters.bias_term:
                     names += ('biases',)
-            elif node.kind == NodeKind.BatchNorm:
+            elif node.kind == NodeKind.BatchNorm or node.kind == NodeKind.BN:
                 names = ('mean', 'variance')
                 if len(node.data) == 4:
                     names += ('scale', 'offset')

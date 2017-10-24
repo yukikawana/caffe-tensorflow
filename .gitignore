@@ -1,10 +1,4 @@
-# OS X temporary metadata
-._*
-*.DS_Store
-
-# Extracted parameters
-*.params
-
-# Python cache
-*.pyc
-
+*.ckpt.data-00000-of-00001
+*.ckpt.meta
+*.ckpt.index
+*.ckpt.tar.gz
